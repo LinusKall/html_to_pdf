@@ -1,0 +1,23 @@
+{
+  "name": "html_to_pdf",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LinusKall/html_to_pdf.git"
+  },
+  "keywords": [
+    "html",
+    "pdf"
+  ],
+  "author": "Linus Käll",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LinusKall/html_to_pdf/issues"
+  },
+  "homepage": "https://github.com/LinusKall/html_to_pdf#readme"
+}
