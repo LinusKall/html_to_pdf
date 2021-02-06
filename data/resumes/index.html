@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <title>Linus Käll</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+          integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="icon" href="images/profile.jpg">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: yellowgreen;
+        }
+
+        .paper {
+            background-color: white;
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            font-size: 12px;
+            display: grid;
+            grid-template-columns: [left] 32% [mid] 68% [right];
+            grid-template-rows: [top] 90% [banner-bottom] 10% [bottom];
+            grid-template-areas: 
+                "summary experience"
+                ". experience";
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .banner {
+            grid-area: summary;
+        }
+        .darkgrey {
+            fill: rgba(30,30,30,1);
+        }
+        .darkgold {
+            fill: darkgoldenrod;
+        }
+
+        #summary {
+            color: white;
+            display: grid;
+            grid-template-columns: [sum-left] 97% [sum-right] 100% [shadow];
+            grid-template-rows: [sum-top name-top] auto [name-bottom pic-top] auto [pic-bottom info-top] auto [info-bottom contact-top] auto [contact-bootom] 100% [sum-bottom];
+            grid-template-areas: 
+                "sum-name ."
+                "sum-pic ."
+                "sum-info ."
+                "sum-contact .";
+            gap: 20px 20px;
+            margin: 10px 25px 10px 25px;
+            letter-spacing: 1px;
+            line-height: 140%;
+        }
+        #sum-name {
+            grid-area: sum-name;
+        }
+        #sum-pic {
+            grid-area: sum-pic;
+            border-radius: 50%;
+            width: 90%;
+            margin: auto;
+        }
+        #sum-pic > img {
+            width: 96%;
+            border-radius: 50%;
+            box-shadow: darkgoldenrod 0 4px 2px;
+        }
+        #sum-info {
+            grid-area: sum-info;
+        }
+        #sum-contact {
+            grid-area: sum-contact;
+        }
+
+
+
+        .experience {
+            grid-area: experience;
+            display: grid;
+            grid-template-columns: [line-left] 10% [line-right exp-left] 90% [exp-right];
+            grid-template-rows: [exp-head] 25px [exp] auto [edu-head] 25px [edu] auto [pro-head] 25px [pro] auto [end];
+            grid-template-areas: 
+                "line-start exp-head"
+                ". exp"
+                "line-edu edu-head"
+                ". edu"
+                "line-pro pro-head"
+                "line-end pro";
+            margin: 10px 10px 10px 0;
+            column-gap: 10px;
+            letter-spacing: 1px;
+            line-height: 120%;
+        }
+        #line {
+            background-color: rgba(30,30,30,1);
+            grid-area: line-start / line-start / line-end / line-end;
+            width: 6px;
+            height: 100%;
+            margin-left: 24px;
+        }
+        .line-bullet {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(30,30,30,1);
+            border-radius: 20px;
+            text-align: center;
+            font-size: 20px;
+            z-index: 10000;
+            color: white;
+            padding-top: 0px;
+            margin: auto;
+            align-self: start;
+        }
+        .line-bullet > i {
+            padding-top: 10px;
+            padding-left: 2px;
+        }
+        .line-divider {
+            width: 40px;
+            height: 40px;
+            border-radius: 40px;
+            background-color: white;
+            z-index: 9000;
+            margin: auto;
+            align-self: start;
+            margin-top: -4px;
+        }
+        .header {
+            color: darkgoldenrod;
+        }
+        .text {
+            line-height: 150%;
+        }
+
+
+        #exp-head {
+            grid-area: exp-head;
+        }
+        #exp-ico {
+            grid-area: line-start;
+        }
+        #exp-text {
+            grid-area: exp;
+        }
+
+
+        #edu-head {
+            grid-area: edu-head;
+        }
+        #edu-ico {
+            grid-area: line-edu;
+        }
+        #edu-ico-divider {
+            grid-area: line-edu;
+        }
+        #edu-text {
+            grid-area: edu;
+        }
+
+
+        #pro-head {
+            grid-area: pro-head;
+        }
+        #pro-ico {
+            grid-area: line-pro;
+        }
+        #pro-ico-divider {
+            grid-area: line-pro;
+        }
+        #pro-text {
+            grid-area: pro;
+        }
+    </style>
+</head>
+<body>
+    <div class="paper">
+
+        <svg class="banner" height="100%" width="100%" viewBox="0 0 69 267" preserveAspectRatio="none">
+            <defs>
+                <filter id="shadow" x="0" y="0" width="200%" height="200%">
+                    <feOffset result="offOut" in="SourceGraphic" dx="0.5" dy="0.5" />
+                    <feColorMatrix result="matrixOut" in="offOut" type="matrix"
+                    values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0" />
+                    <feGaussianBlur result="blurOut" in="matrixOut" stdDeviation="1" />
+                    <feBlend in="SourceGraphic" in2="blurOut" mode="normal" />
+                </filter>
+            </defs>
+            <path class="darkgold" d="M 0 0 L 64 0 L 64 255 L 57 262 L 0 262" filter="url(#shadow)"></path>
+            <path class="darkgrey" d="M 0 0 L 64 0 L 64 255 L 57 262 L 0 262"></path>
+            <path class="darkgold" d="M 64 255 L 57 255 L 57 262"></path>
+        </svg>
+
+        <div class="banner" id="summary">
+            <h1 id="sum-name">
+                Linus Käll
+            </h1>
+            <div id="sum-pic"><img src="images/profile_me.jpg" alt="My profile picture"></div>
+            <div id="sum-info">
+                <h2>About Me</h2>
+                <p>
+                    I am 22 years old and have a broad interest in technology. As of writing this I am especially interested in low level programming in rust.
+                </p>
+                <br>
+                <p>
+                    I like to learn new things and apply them to realworld situations. I often work in groups and love to discuss problems with my colleagues to reach the best conclusions, and hopefully learn something.
+                </p>
+                <br>
+                <p>
+                    As of writing this, I am working on a game concept, which I wish to implement in the future.
+                </p>
+            </div>
+            <div id="sum-contact">
+                <h2>Contact Info</h2>
+                <p>
+                    T: 070 331 68 26
+                </p>
+                <p>
+                    E: linus.kall@nodetron.com
+                </p>
+                <p>
+                    Rydsvägen 258 B <br>
+                    584 34, Linköping
+                </p>
+            </div>
+        </div>
+
+        <div class="experience">
+
+            <div id="line"></div>
+            
+            
+            <div class="line-bullet" id="exp-ico"><i class="fas fa-hourglass-half"></i></div>
+            <h1 class="header" id="exp-head">Experience</h1>
+            <div class="text" id="exp-text">
+                <h2>
+                    Janitor <br>
+                    Falbygdens Energi AB, Falköping
+                </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+
+                <h2>
+                    Marketing Assistant <br>
+                    Paroc AB, Skövde
+                </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+
+                <h2>
+                    Logistics <br>
+                    Swedemount Sportswear & Fashion AB, Grebbestad
+                </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+            </div>
+
+            <div class="line-divider" id="edu-ico-divider"></div>
+            <div class="line-bullet" id="edu-ico"><i class="fas fa-school"></i></div>
+            <h1 class="header" id="edu-head">Education</h1>
+            <div class="text" id="edu-text">
+                <h2>
+                    Ållebergsgymnasiet <br>
+                    IT exam, Falköping
+                </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+
+                <h2>
+                    Linköping Univeristy <br>
+                    Master of Science in IT, Linköping
+                </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+            </div>
+
+            <div class="line-divider" id="pro-ico-divider"></div>
+            <div class="line-bullet" id="pro-ico"><i class="fas fa-project-diagram"></i></div>
+            <h1 class="header" id="pro-head">Projects</h1>
+            <div class="text" id="pro-text">
+                <h2>
+                    Rust Experiments
+                </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+
+                <h2>
+                    Game Idea
+                </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+
+                <h2>
+                    Game Jam Animations and Logic
+                </h2>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

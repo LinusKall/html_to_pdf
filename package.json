@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/LinusKall/html_to_pdf/issues"
   },
-  "homepage": "https://github.com/LinusKall/html_to_pdf#readme"
+  "homepage": "https://github.com/LinusKall/html_to_pdf#readme",
+  "dependencies": {
+    "puppeteer": "^7.0.1"
+  }
 }
