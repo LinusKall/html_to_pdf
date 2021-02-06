@@ -12,7 +12,7 @@
         body {
             padding: 0;
             margin: 0;
-            background-color: yellowgreen;
+            background-color: white;
         }
 
         .paper {
@@ -26,7 +26,7 @@
             grid-template-rows: [top] 90% [banner-bottom] 10% [bottom];
             grid-template-areas: 
                 "summary experience"
-                ". experience";
+                "summary experience";
             font-family: 'Roboto', sans-serif;
         }
 
@@ -98,9 +98,9 @@
         #line {
             background-color: rgba(30,30,30,1);
             grid-area: line-start / line-start / line-end / line-end;
-            width: 6px;
+            width: 4px;
             height: 100%;
-            margin-left: 24px;
+            margin-left: 25px;
         }
         .line-bullet {
             width: 40px;
@@ -115,14 +115,14 @@
             margin: auto;
             align-self: start;
         }
-        .line-bullet > i {
-            padding-top: 10px;
-            padding-left: 2px;
+        .line-bullet > img {
+            height: 22px;
+            padding-top: 9px;
         }
         .line-divider {
             width: 40px;
             height: 40px;
-            border-radius: 40px;
+            border-radius: 20px;
             background-color: white;
             z-index: 9000;
             margin: auto;
@@ -233,63 +233,63 @@
             <div id="line"></div>
             
             
-            <div class="line-bullet" id="exp-ico"><i class="fas fa-hourglass-half"></i></div>
+            <div class="line-bullet" id="exp-ico"><img src="fa/svgs/solid/hourglass-half.svg"/></div>
             <h1 class="header" id="exp-head">Experience</h1>
             <div class="text" id="exp-text">
                 <h2>
                     Janitor <br>
                     Falbygdens Energi AB, Falköping
                 </h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+                The summer I worked at FEAB, consisted of helping the technicians with their work, for example swaping parts in the district heating system. I also did various minor tasks such as cleaning up the machine halls and cutting the grass.
 
                 <h2>
                     Marketing Assistant <br>
                     Paroc AB, Skövde
                 </h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+                At Paroc I got the task to register new products in their databases, which was expected to take three week, but it was solved in less than a week. This meant I got to work on the design of their danish catalog, which meant learning more about Excel.
 
                 <h2>
                     Logistics <br>
                     Swedemount Sportswear & Fashion AB, Grebbestad
                 </h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+                I have worked at Swedemount two summers in a row, which consisted of collecting and packing wares to be sent to customers. While working there, they were in the middle of redesigning their databases and client applications. This meant I got to share my experience, which was appreciated by the IT team.
             </div>
 
             <div class="line-divider" id="edu-ico-divider"></div>
-            <div class="line-bullet" id="edu-ico"><i class="fas fa-school"></i></div>
+            <div class="line-bullet" id="edu-ico"><img src="fa/svgs/solid/school.svg"/></div>
             <h1 class="header" id="edu-head">Education</h1>
             <div class="text" id="edu-text">
                 <h2>
                     Ållebergsgymnasiet <br>
                     IT exam, Falköping
                 </h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+                While studying at the gymnasium, I took all mathematics, physics, english, and programming courses available. This education became solid ground for my current studies.
 
                 <h2>
                     Linköping Univeristy <br>
                     Master of Science in IT, Linköping
                 </h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+                I began my IT studies at the univeristy fall of 2018. During this time I have studied data structures, network infrastructure, wireless networks, high and low level programming, process programming, calculus, statistics, design, rights and ethics, diversity and gender, linear systems, and control engineering.
             </div>
 
             <div class="line-divider" id="pro-ico-divider"></div>
-            <div class="line-bullet" id="pro-ico"><i class="fas fa-project-diagram"></i></div>
+            <div class="line-bullet" id="pro-ico"><img src="fa/svgs/solid/project-diagram.svg"/></div>
             <h1 class="header" id="pro-head">Projects</h1>
             <div class="text" id="pro-text">
                 <h2>
                     Rust Experiments
                 </h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+                At the moment I am experiementing with the game engine Bevy, the web framework Actix, and web assembly.
 
                 <h2>
                     Game Idea
                 </h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+                I am currently doing world, character, and power system building for a fantasy game, with the help of some friends. They have contributed good suggestions, characters and has created a world map as well. Currently, the project is a circa 30 pages long document with ideas. This is a passion project which we wish to implement in the future.
 
                 <h2>
-                    Game Jam Animations and Logic
+                    LiU Game Jam Animations and Logic
                 </h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque et lacus dolor. Ut eget ultrices ex. In euismod, tellus in varius rutrum, dolor nisl rhoncus nulla, sit amet laoreet ante lacus at ligula. Vivamus congue commodo vulputate. Nunc malesuada nisl.
+                At this game jam, I tried creating pixel art animations, which I then implemented in Unity, with my teammates. Here is a link: <a href="https://github.com/TheCodeLamp/The-Gruesome-Boulders">https://github.com/TheCodeLamp/The-Gruesome-Boulders</a>
             </div>
         </div>
 
