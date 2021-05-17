@@ -6,7 +6,11 @@ const render = async (path, file_name) => {
     const page = await browser.newPage();
 
     await page.goto(`http://localhost:8080/${path}`, { waitUntil: 'networkidle2' }).catch("Could not go to http://localhost:8080/${path}");
-    await page.pdf({ path: `${__dirname}/pdfs/${file_name}.pdf`, format: "A4", scale: 0.93 }).catch("Could not render http://localhost:8080/${path}");
+    await page.pdf({ 
+        path: `${__dirname}/pdfs/${file_name}.pdf`, 
+        format: "A4", // "A4" standard
+        scale: 0.93 // 0.93 standard
+    }).catch("Could not render http://localhost:8080/${path}");
 
     await browser.close();
 }
@@ -20,12 +24,13 @@ const render = async (path, file_name) => {
         }
     
         files.forEach((file) => {
+            console.log(file);
             const name = file.replace(/\.[^/.]+$/, "");
     
-            render(`resume/${name}`, name);
+            render(`data/resumes/${name}/index.html`, name);
         });
     });
-    
+ 
     fs.readdir(`${__dirname}/data/cover_letters`, (err, files) => {
         if (err) {
             console.error(err);
@@ -33,9 +38,24 @@ const render = async (path, file_name) => {
         }
     
         files.forEach((file) => {
+            console.log(file);
             const name = file.replace(/\.[^/.]+$/, "");
     
-            render(`cover-letter/${name}`, name);
+            render(`data/cover_letters/${name}/index.html`, name);
+        });
+    });
+
+    fs.readdir(`${__dirname}/data/general`, (err, files) => {
+        if (err) {
+            console.error(err);
+            return;
+        }
+    
+        files.forEach((file) => {
+            console.log(file);
+            const name = file.replace(/\.[^/.]+$/, "");
+    
+            render(`data/general/${name}/index.html`, name);
         });
     });
     
