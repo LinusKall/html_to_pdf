@@ -68,28 +68,3 @@ const render = async (path, file_name) => {
     
 
 })();
-
-/*
-(async () => {                                  // declare function
-    const browser = await puppeteer.launch();     // run browser
-    const page = await browser.newPage();         // create new tab
-
-    await page.goto('http://localhost:8080/data/resumes/');  // go to page
-    await page.pdf({
-        path: 'Linus_Käll_Resume.pdf',
-        format: "A4",
-        printBackground: true,
-        scale: 0.93
-    });
-
-    await page.goto('http://localhost:8080/data/cover_letters/');  // go to page
-    await page.pdf({
-        path: 'Linus_Käll_Cover_Letter_to_SAAB.pdf',
-        format: "A4",
-        printBackground: true,
-        scale: 0.93
-    });
-
-    await browser.close();                        // close browser
-  })();
-  */
