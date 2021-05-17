@@ -15,7 +15,7 @@
     "pdf"
   ],
   "author": "Linus Käll",
-  "license": "ISC",
+  "license": "Apache License 2.0",
   "bugs": {
     "url": "https://github.com/LinusKall/html_to_pdf/issues"
   },
