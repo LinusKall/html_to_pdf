@@ -1,14 +1,11 @@
 const fs = require('fs');
-const puppeteer = require('puppeteer');
-
-const dirs = ["./pdfs", "./data/resumes", "./data/cover_letters"];
-
+const dirs = ["./pdfs", "./data", "./data/general", "./data/resumes", "./data/cover_letters"];
 dirs.forEach((dir) => {
     if (!fs.existsSync(dir)) {
         fs.mkdirSync(dir);
     }
 });
-
+const puppeteer = require('puppeteer');
 
 
 const render = async (path, file_name) => {
