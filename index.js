@@ -1,6 +1,16 @@
 const fs = require('fs');
 const puppeteer = require('puppeteer');
 
+const dirs = ["./pdfs", "./data/resumes", "./data/cover_letters"];
+
+dirs.forEach((dir) => {
+    if (!fs.existsSync(dir)) {
+        fs.mkdirSync(dir);
+    }
+});
+
+
+
 const render = async (path, file_name) => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
