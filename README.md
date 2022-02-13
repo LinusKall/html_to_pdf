@@ -1,3 +1,7 @@
+# MAIN BRANCH CURRENTLY NOT WORKING
+
+Use the files from this commit: (8e2e353)[https://github.com/LinusKall/html_to_pdf/tree/8e2e3537a4a811d18627438fdf01e2df92310a9f] instead.
+
 # Usage
 
 1. Clone this repository ⬇️, 
