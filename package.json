@@ -21,8 +21,9 @@
   },
   "homepage": "https://github.com/LinusKall/html_to_pdf#readme",
   "dependencies": {
-    "http-server": "^14.1.0",
+    "connect": "^3.7.0",
     "puppeteer": "^7.0.1",
-    "puppeteer-render-text": "^1.0.3"
+    "puppeteer-render-text": "^1.0.3",
+    "serve-static": "^1.14.2"
   }
 }
