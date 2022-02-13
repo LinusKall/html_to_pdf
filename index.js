@@ -35,19 +35,19 @@ const render = async (path, file_name) => {
         .catch("Could not render http://localhost:8080/${path}");
 
     await browser.close();
-    
+
     return Promise.resolve(0);
 }
 
 // Render all HTML instances in dir_to_render
 const renderDir = async (dir_to_render) => {
-    fs.readdir(__dirname + dir_to_render, async (err, files) => {
+    await fs.readdir(__dirname + dir_to_render, async (err, files) => {
         if (err) {
             console.error(err);
             return;
         }
     
-        return Promise.all(files.map(async (file) => {
+        for await (const file of files) {
             if (
                 file != ".gitignore" && 
                 file != "put your folders containing your HTML resumes here!" &&
@@ -55,12 +55,12 @@ const renderDir = async (dir_to_render) => {
                 file != "put your folders containing your HTML here!"
             ) {
                 const name = file.replace(/\.[^/.]+$/, "");
-                const res = await render(`${dir_to_render + "/" + name}/index.html`, name);
+                await render(`${dir_to_render + "/" + name}/index.html`, name);
                 console.log("Rendered " + file);
-                return res;
             }
-        }));
+        }
     });
+    return Promise.resolve(0);
 }
 
 // Render all HTML instances in all dirs_to_render
