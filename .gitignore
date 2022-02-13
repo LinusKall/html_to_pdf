@@ -1,5 +1,5 @@
-data/general/*.*
-data/cover_letters/*.*
-data/resumes/*.*
+data/general/**.*
+data/cover_letters/**.*
+data/resumes/**.*
 node_modules
 pdfs/*.*
