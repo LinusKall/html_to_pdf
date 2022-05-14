@@ -9,5 +9,5 @@
 
 # Tips
 
-1. If your PDFs don't look correct, use ``<style>...</style>`` tags inside your ``index.html`` file instead of external ``.css`` files for styling.
+1. If your PDFs does not look correct, use ``<style>...</style>`` tags inside your ``index.html`` file instead of external ``.css`` files for styling.
 1. Add ``html { -webkit-print-color-adjust: exact; }`` inside your ``<style>...</style>`` tags for better colors! 🌈
